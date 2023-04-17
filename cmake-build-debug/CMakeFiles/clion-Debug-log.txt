@@ -1,0 +1,19 @@
+"C:\Program Files\JetBrains\CLion 2023.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\alien\Documents\GitHub\3ESD -B C:\Users\alien\Documents\GitHub\3ESD\cmake-build-debug
+-- The C compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.1.1/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+CMake Error at CMakeLists.txt:17 (add_executable):
+  Cannot find source file:
+
+    .ccls-cache/@home@runner@3ESD/atividades@lista TAD@6 carn�@apenas TAD data@data.c
+
+
+CMake Error at CMakeLists.txt:17 (add_executable):
+  No SOURCES given to target: 3ESD
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
