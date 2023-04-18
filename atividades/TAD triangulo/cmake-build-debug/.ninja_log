@@ -1,0 +1,5 @@
+# ninja log v5
+3	638	7035547722280170	CMakeFiles/TAD_triangulo.dir/main.c.obj	280540e4e1990179
+44	881	7035547725080206	CMakeFiles/TAD_triangulo.dir/tipoTriangulo.c.obj	fbeea5b1dc326397
+25	883	7035547724990138	CMakeFiles/TAD_triangulo.dir/tipoPonto.c.obj	9cb487262ef99a59
+884	1581	7035547732250194	TAD_triangulo.exe	9c34c25016aab469
