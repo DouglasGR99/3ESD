@@ -11,110 +11,77 @@
 */
 
 #include<stdio.h>
-#include<math.h>
-#include<string.h>
 #include "ponto.h"
 
-typedef struct {
-    char nome[10];
-    Ponto *A,*B,*C;
-    float perimetro;
-} Triangulo;
 
-float calcDist(int x1, int y1, int x2, int y2);
-float calcPerimetro(Triangulo t);
-void desenhaMoldura(void);
-void exibeResposta(Triangulo t);
-void exibeCoordenadas(Triangulo t);
+struct Triangulo {
+    Ponto *pontos[3];
+    char nome[10];
+    float perimetro;
+};
+
+void ordenaTriangulos(struct Triangulo* triangulos, int tamanho);
+float calcPerimetro(struct Triangulo t);
+void exibeResposta(struct Triangulo t);
 
 int main(void)
 {
-    Triangulo triangulos[4];
-    int i, j;
-    float coordenadas[6];
+    struct Triangulo triangulos[4];
+    float x, y;
 
-    for(i=0; i<4; i++)
-    {
-        printf("\nNome da %dª pessoa?\n", i+1);
+    //criar
+    for (int i = 0; i < 4; i++) {
+        printf("\nNome da %dª pessoa?\n", i + 1);
         scanf("%s", triangulos[i].nome);
-        for (j=0; j<6; j++)
-        {
-            printf("Digite a coordenada %d: ", j+1);
-            scanf("%f", &coordenadas[j]);
+        for (int j = 0; j < 3; j++) {
+            printf("Digite a coordenada x%d: ", j + 1);
+            scanf("%f", &x);
+            printf("Digite a coordenada y%d: ", j + 1);
+            scanf("%f", &y);
+            triangulos[i].pontos[j] = pto_cria(x, y);
         }
-        triangulos[i].A = pto_cria(coordenadas[0],coordenadas[1]);
-        triangulos[i].B = pto_cria(coordenadas[2],coordenadas[3]);
-        triangulos[i].C = pto_cria(coordenadas[4],coordenadas[5]);
         triangulos[i].perimetro = calcPerimetro(triangulos[i]);
     }
 
-    Triangulo triangulosOrg[4];
-    memcpy(triangulosOrg, triangulos, sizeof(Triangulo) * 4);
-    for(i=1;i<4;i++)
-    {
-        for(j=0;j<4-i;j++)
-        {
-            if(triangulosOrg[j].perimetro > triangulosOrg[j+1].perimetro)
-            {
-                Triangulo salvo = triangulosOrg[j];
-                triangulosOrg[j] = triangulosOrg[j+1];
-                triangulosOrg[j+1] = salvo;
-            }
-        }
+    //ordenar
+    ordenaTriangulos(triangulos, 4);
+
+    //exibir
+    for (int i = 0; i < 4; i++) {
+        printf("\n\n");
+        exibeResposta(triangulos[i]);
     }
 
-    for(i=0;i<4;i++)
-    {
-        for(j=0;j<4;j++)
-        {
-            if(triangulos[j].perimetro == triangulosOrg[i].perimetro)
-            {
-                desenhaMoldura();
-                exibeResposta(triangulos[j]);
-                exibeCoordenadas(triangulos[j]);
-                desenhaMoldura();
-            }
-        }
-    }
     return 0;
 }
 
-float calcDist(int x1, int y1, int x2, int y2)
-{
-    return sqrt(pow((x1-x2),2.0) + pow((y1-y2),2.0));
+
+void ordenaTriangulos(struct Triangulo* triangulos, int tamanho) {
+    int i, j;
+    for (i = 1; i < tamanho; i++) {
+        for (j = 0; j < tamanho - i; j++) {
+            if (triangulos[j].perimetro > triangulos[j + 1].perimetro) {
+                struct Triangulo tmp = triangulos[j];
+                triangulos[j] = triangulos[j + 1];
+                triangulos[j + 1] = tmp;
+            }
+        }
+    }
 }
 
-float calcPerimetro(Triangulo t)
-{
-    float dAB = pto_distancia(t.A,t.B);
-    float dAC = pto_distancia(t.B,t.C);
-    float dBC = pto_distancia(t.A,t.C);
-    float perim = dAB + dAC + dBC;
-    return perim;
+float calcPerimetro(struct Triangulo t) {
+    float perimetro = 0;
+    for (int i = 0; i < 3; i++) {
+        perimetro += pto_distancia(t.pontos[i], t.pontos[(i + 1) % 3]);
+    }
+    return perimetro;
 }
 
-
-void exibeResposta(Triangulo t)
-{
-	printf("\n %s - Perímetro: %.1f",t.nome,t.perimetro);
-	return;
-}
-
-
-void exibeCoordenadas(Triangulo t)
-{
-	int i,cont=1;
-	printf("/ Coordenadas:");
-	pto_exibe(t.A);
-  pto_exibe(t.B);
-  pto_exibe(t.C);
-	return;
-}
-
-
-void desenhaMoldura(void)
-{
-	printf("\n==============================");
-	printf("\n==============================");
-	return;
+void exibeResposta(struct Triangulo t) {
+    int i;
+    printf("\n %s - Perímetro: %.1f", t.nome, t.perimetro);
+    printf("\nCoordenadas: ");
+    for (i = 0; i < 3; i++) {
+        pto_exibe(t.pontos[i]);
+    }
 }

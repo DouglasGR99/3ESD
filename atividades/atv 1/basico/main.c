@@ -25,7 +25,6 @@ struct Triangulo {
 void ordenaTriangulos(struct Triangulo* triangulos, int tamanho);
 float calcDist(struct Ponto p1, struct Ponto p2);
 float calcPerimetro(struct Triangulo t);
-void desenhaMoldura(void);
 void exibeResposta(struct Triangulo t);
 
 int main(void)

@@ -36,7 +36,6 @@ void pto_libera(Ponto* p){
 void pto_acessa(Ponto* p, float* x, float* y){
   (*x) = p->x; 
   (*y) = p->y; 
-  return;
 }
 
 /* Função atribui - Atribui novos valores às coordenadas de um ponto */
@@ -44,7 +43,6 @@ void pto_acessa(Ponto* p, float* x, float* y){
 void pto_atribui(Ponto* p, float x, float y){
    p->x=x ;
    p->y=y; 
-  return;
 }
 /* funções que alteram/acessam as coordenadas individualmente */
 
@@ -66,12 +64,10 @@ char* pto_getPonto(Ponto* p){
   ptAux=(char*)malloc(qtCaracteres);
   sprintf(ptAux,"(%.2f , %.2f)",p->x,p->y);
   return ptAux;
-  
-};
+}
 
 /* Função exibe -Escreve na tela o ponto no formato (xxx.xx,yyy.yy)*/
 
 void pto_exibe(Ponto* p){
  printf("(%.2f , %.2f)",p->x,p->y);
-  return;
 }

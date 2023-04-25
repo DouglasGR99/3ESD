@@ -1,0 +1,3 @@
+C:/Users/alien/Documents/GitHub/3ESD/atividades/atv 1/TAD ponto/cmake-build-debug/CMakeFiles/TAD_ponto.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/atv 1/TAD ponto/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/atv 1/TAD ponto/cmake-build-debug/CMakeFiles/rebuild_cache.dir

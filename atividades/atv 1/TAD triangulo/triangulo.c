@@ -13,7 +13,6 @@ struct tri{
     float perimetro;
 };
 
-
 Triangulo* tri_cria(char* nome, float x1, float y1, float x2, float y2, float x3, float y3){
   Triangulo *p=(Triangulo*)malloc(sizeof(Triangulo));
   //considerando sempre que os ptos são não colineares
@@ -21,12 +20,41 @@ Triangulo* tri_cria(char* nome, float x1, float y1, float x2, float y2, float x3
   p->B=pto_cria(x2,y2);
   p->C=pto_cria(x3,y3);
   strcpy(p->nome, nome);
-  p->perimetro = calc_perimetro(p);
+  p->perimetro = tri_calcPerimetro(p);
   return p;
 }
 
+void tri_libera(Triangulo* p){
+  pto_libera(p->A);
+  pto_libera(p->B);
+  pto_libera(p->C);
+  free(p);
+}
 
-float calc_perimetro(Triangulo* p)
+void tri_acessa(Triangulo* p, float* x1, float* y1, float* x2, float* y2, float* x3, float* y3){
+  pto_acessa(p->A,x1,y1);
+  pto_acessa(p->B,x2,y2);
+  pto_acessa(p->C,x3,y3);
+}
+
+void tri_atribui(Triangulo* p, float x1, float y1, float x2, float y2, float x3, float y3){
+  pto_atribui(p->A,x1,y1);
+  pto_atribui(p->B,x2,y2);
+  pto_atribui(p->C,x3,y3);
+  p->perimetro = tri_calcPerimetro(p);
+}
+
+float tri_calcArea(Triangulo* p)
+{
+    float dAB = pto_distancia(p->A,p->B);
+    float dAC = pto_distancia(p->B,p->C);
+    float dBC = pto_distancia(p->A,p->C);
+    float pTemp = (dAB + dAC + dBC)/2;
+    float area = sqrt(pTemp*(pTemp-dAB)*(pTemp-dAC)*(pTemp-dBC));
+    return area;
+}
+
+float tri_calcPerimetro(Triangulo* p)
 {
     float dAB = pto_distancia(p->A,p->B);
     float dAC = pto_distancia(p->B,p->C);
@@ -35,8 +63,7 @@ float calc_perimetro(Triangulo* p)
     return perim;
 }
 
-
-void tri_bubble_sort(Triangulo** p, int tamanho) {
+void tri_bubbleSort(Triangulo** p, int tamanho) {
   int i, j;
   Triangulo* temp;
   for (i = 0; i < tamanho-1; i++) {
@@ -48,29 +75,18 @@ void tri_bubble_sort(Triangulo** p, int tamanho) {
       }
     }
   }
-  return;
 }
 
 
-void desenha_moldura(void)
-{
-	printf("\n==============================");
-	printf("\n==============================");
-	return;
-}
-
-
-void exibe_resposta(Triangulo** p, int tamanho)
+void tri_exibeVetor(Triangulo** p, int tamanho)
 {
   int i;
   for(i=0; i < tamanho; i++){
-    desenha_moldura();
-    printf("\n %s - Perímetro: %.1f",p[i]->nome, p[i]->perimetro);
-    printf("/ Coordenadas:");
-  	pto_exibe(p[i]->A);
+    printf("\n\n %s - Perímetro: %.1f",p[i]->nome, p[i]->perimetro);
+      printf("\n Área: %.1f", tri_calcArea(p[i]));
+    printf("\n Coordenadas:");
+    pto_exibe(p[i]->A);
     pto_exibe(p[i]->B);
     pto_exibe(p[i]->C);
   }
-  desenha_moldura();
-	return;
 }

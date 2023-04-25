@@ -29,7 +29,15 @@ int main(void) {
   triangulos[3] = tri_cria("mico", 3, 3, 3, 2, 2, 2);
   // a ordem correta de impressao sera mico, doug, rato, sapo.
 
-  tri_bubble_sort(triangulos, TAM);
-  exibe_resposta(triangulos, TAM);
+    //exibindo os triangulos
+    tri_bubbleSort(triangulos, TAM);
+
+    //exibindo os triangulos
+    tri_exibeVetor(triangulos, TAM);
+
+    //liberando a memoria
+    for (int i = 0; i < TAM; i++) {
+        tri_libera(triangulos[i]);
+    }
   return 0;
 }
