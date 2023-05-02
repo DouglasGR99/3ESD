@@ -1,0 +1,3 @@
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD pilha encadeada/cmake-build-debug/CMakeFiles/TAD_pilha_encadeada.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD pilha encadeada/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD pilha encadeada/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -19,8 +19,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b249df1-d16e-4a4a-bbdd-b97e4faee1a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/TAD triangulo/.idea/TAD triangulo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TAD triangulo/.idea/TAD triangulo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atv 1/TAD ponto/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/atv 1/TAD ponto/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atv 1/TAD ponto/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/atv 1/TAD ponto/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,12 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/alien/Documents/GitHub/3ESD/atividades/atividade Lista",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD pilha encadeada",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -61,6 +67,12 @@
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ativ2" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="atividades" TARGET_NAME="atv3esd2 (exames).c" CONFIG_NAME="ativ2">
+      <option name="sourceFile" value="C:\Users\alien\Documents\GitHub\3ESD\atividades\atv 2\atv3esd2 (exames).c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -73,6 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1681851950422</updated>
       <workItem from="1681851954107" duration="259000" />
+      <workItem from="1682711554884" duration="1772000" />
+      <workItem from="1682893368503" duration="122000" />
     </task>
     <servers />
   </component>

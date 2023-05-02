@@ -4,7 +4,7 @@
 	exibir perim bonitinho
 
 	Mostre para cada uma das pessoas (total 4)
-	seu nome , as coordenadas e perímetro de seu triângulo,
+	seu nome , a  s coordenadas e perímetro de seu triângulo,
 	classificados crescentemente pelo perímetro
  
   Altere o programa da atividade 1 para struct  e com o TAD ponto    para as coordenadas ( vetor de pontos)
