@@ -1,0 +1,12 @@
+# ninja log v5
+28	981	7048567695738738	CMakeFiles/TAD_pilha_encadeada.dir/main.c.obj	86341b5b0bb4e630
+5	987	7048567695798895	CMakeFiles/TAD_pilha_encadeada.dir/pilha.c.obj	d1c74fa151d885a3
+988	1878	7048567704688836	TAD_pilha_encadeada.exe	582bbd5e2e62f96d
+8	449	7048613721566010	CMakeFiles/TAD_pilha_encadeada.dir/main.c.obj	86341b5b0bb4e630
+451	933	7048613726335998	TAD_pilha_encadeada.exe	582bbd5e2e62f96d
+9	255	7048613966793476	CMakeFiles/TAD_pilha_encadeada.dir/main.c.obj	86341b5b0bb4e630
+256	710	7048613971213613	TAD_pilha_encadeada.exe	582bbd5e2e62f96d
+7	190	7048614433119622	CMakeFiles/TAD_pilha_encadeada.dir/main.c.obj	86341b5b0bb4e630
+192	534	7048614436389746	TAD_pilha_encadeada.exe	582bbd5e2e62f96d
+8	615	7048615342836584	CMakeFiles/TAD_pilha_encadeada.dir/main.c.obj	86341b5b0bb4e630
+617	976	7048615347196508	TAD_pilha_encadeada.exe	582bbd5e2e62f96d
