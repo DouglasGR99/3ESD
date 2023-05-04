@@ -1,0 +1,10 @@
+# ninja log v5
+3	1040	7049032974554033	CMakeFiles/TAD_fila_encadeada.dir/fila.c.obj	3e5b40a4d6a97186
+230	1163	7049032975824072	CMakeFiles/TAD_fila_encadeada.dir/main.c.obj	6e0860133a948806
+1163	2176	7049032986033884	TAD_fila_encadeada.exe	2a3ca20c7ee863ed
+5	219	7049035480925762	CMakeFiles/TAD_fila_encadeada.dir/main.c.obj	6e0860133a948806
+221	640	7049035484525824	TAD_fila_encadeada.exe	2a3ca20c7ee863ed
+6	222	7049035721394194	CMakeFiles/TAD_fila_encadeada.dir/main.c.obj	6e0860133a948806
+223	666	7049035725064203	TAD_fila_encadeada.exe	2a3ca20c7ee863ed
+9	380	7049035820984226	CMakeFiles/TAD_fila_encadeada.dir/main.c.obj	6e0860133a948806
+383	886	7049035826254238	TAD_fila_encadeada.exe	2a3ca20c7ee863ed
