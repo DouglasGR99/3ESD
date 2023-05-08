@@ -1,0 +1,6 @@
+# ninja log v5
+3	642	7049427359845754	CMakeFiles/TAD_fila_no_bobo.dir/main.c.obj	be38425544ed5a68
+34	685	7049427360345701	CMakeFiles/TAD_fila_no_bobo.dir/filaBobo.c.obj	33bfcf1af3030fdd
+686	1312	7049427366555763	TAD_fila_no_bobo.exe	3f85bce02c729a9f
+9	260	7049427870295784	CMakeFiles/TAD_fila_no_bobo.dir/main.c.obj	be38425544ed5a68
+262	841	7049427876015575	TAD_fila_no_bobo.exe	3f85bce02c729a9f
