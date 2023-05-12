@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "simplesmenteE.h"
 
 int mostraMenu();
@@ -58,7 +57,7 @@ int main() {
 
 int mostraMenu() {
     int opc;
-    printf("1 - Inserir no inicio\n");
+    printf("1 - Inserir\n");
     printf("2 - Inserir ordenado\n");
     printf("3 - Remover\n");
     printf("4 - Consultar\n");

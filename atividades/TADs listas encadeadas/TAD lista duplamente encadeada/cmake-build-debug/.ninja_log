@@ -1,6 +1,7 @@
 # ninja log v5
-2	511	7055721057997378	CMakeFiles/TAD_lista_duplamente_encadeada.dir/main.c.obj	6903a016e9bb27ca
-18	996	7055721062877439	CMakeFiles/TAD_lista_duplamente_encadeada.dir/duplamenteE.c.obj	d09adb168315d238
-997	1938	7055721072257484	TAD_lista_duplamente_encadeada.exe	fbea3b1d806a92ed
 17	369	7055721745529303	CMakeFiles/TAD_lista_duplamente_encadeada.dir/main.c.obj	6903a016e9bb27ca
+18	996	7055721062877439	CMakeFiles/TAD_lista_duplamente_encadeada.dir/duplamenteE.c.obj	d09adb168315d238
 370	1015	7055721751961505	TAD_lista_duplamente_encadeada.exe	fbea3b1d806a92ed
+23	397	7055749572214816	CMakeFiles/TAD_lista_duplamente_encadeada.dir/main.c.obj	afade6b2a2820374
+7	463	7055749572964758	CMakeFiles/TAD_lista_duplamente_encadeada.dir/duplamenteE.c.obj	5e3e2915f390ec63
+464	829	7055749576704630	TAD_lista_duplamente_encadeada.exe	fbea3b1d806a92ed

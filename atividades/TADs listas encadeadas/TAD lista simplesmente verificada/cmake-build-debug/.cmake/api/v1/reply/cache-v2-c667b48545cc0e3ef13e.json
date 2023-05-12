@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada/cmake-build-debug"
+			"value" : "c:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista simplesmente verificada/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista simplesmente verificada/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada"
+			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista simplesmente verificada"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/TAD_lista_simplesmente_encadeada"
+			"value" : "C:/Program Files (x86)/TAD_lista_simplesmente_verificada"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -731,7 +731,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "TAD_lista_simplesmente_encadeada"
+			"value" : "TAD_lista_simplesmente_verificada"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1110,7 +1110,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "TAD_lista_simplesmente_encadeada_BINARY_DIR",
+			"name" : "TAD_lista_simplesmente_verificada_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1119,10 +1119,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada/cmake-build-debug"
+			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista simplesmente verificada/cmake-build-debug"
 		},
 		{
-			"name" : "TAD_lista_simplesmente_encadeada_IS_TOP_LEVEL",
+			"name" : "TAD_lista_simplesmente_verificada_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1134,7 +1134,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "TAD_lista_simplesmente_encadeada_SOURCE_DIR",
+			"name" : "TAD_lista_simplesmente_verificada_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada"
+			"value" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista simplesmente verificada"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

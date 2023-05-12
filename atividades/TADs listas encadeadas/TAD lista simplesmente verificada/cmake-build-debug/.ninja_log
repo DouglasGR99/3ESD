@@ -1,0 +1,6 @@
+# ninja log v5
+14	686	7055781229522076	CMakeFiles/TAD_lista_simplesmente_verificada.dir/main.c.obj	a98746e46c3686b8
+16	347	7055782687455381	CMakeFiles/TAD_lista_simplesmente_verificada.dir/main.c.obj	a98746e46c3686b8
+4	395	7055782687905430	CMakeFiles/TAD_lista_simplesmente_verificada.dir/simplesVer.c.obj	39a0bef43c9bdcd9
+6	229	7055783149107349	CMakeFiles/TAD_lista_simplesmente_verificada.dir/simplesVer.c.obj	39a0bef43c9bdcd9
+230	648	7055783152497340	TAD_lista_simplesmente_verificada.exe	35da3bb080cbd35f
