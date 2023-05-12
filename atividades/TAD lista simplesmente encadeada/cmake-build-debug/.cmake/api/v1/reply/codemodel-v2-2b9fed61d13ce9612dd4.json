@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TAD_lista_simplesmente_encadeada",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TAD_lista_simplesmente_encadeada::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TAD_lista_simplesmente_encadeada-Debug-086e575a82bc4ecad706.json",
+					"name" : "TAD_lista_simplesmente_encadeada",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada/cmake-build-debug",
+		"source" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TAD lista simplesmente encadeada"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

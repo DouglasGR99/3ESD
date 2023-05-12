@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "duplamenteE.h"
+#include <stdlib.h>
+#include "simplesmenteE.h"
 
 int mostraMenu();
 
@@ -37,13 +38,10 @@ int main() {
                 imprimeLista(l);
                 break;
             case 6:
-                imprimeListaContrario(l);
-                break;
-            case 7:
                 if (listaVazia(l)) { printf("Lista vazia!\n");
                 } else { printf("Lista nao é vazia!\n"); }
                 break;
-            case 8:
+            case 7:
                 printf("Tamanho da lista: %d\n", tamanhoLista(l));
                 break;
             case 0:
@@ -65,9 +63,8 @@ int mostraMenu() {
     printf("3 - Remover\n");
     printf("4 - Consultar\n");
     printf("5 - Imprimir\n");
-    printf("6 - Imprimir ao contrario\n");
-    printf("7 - Verificar se a lista esta vazia\n");
-    printf("8 - Tamanho da lista\n");
+    printf("6 - Verificar se a lista esta vazia\n");
+    printf("7 - Tamanho da lista\n");
     printf("0 - Sair\n");
     scanf("%d", &opc);
     return opc;
