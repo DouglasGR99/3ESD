@@ -24,20 +24,24 @@ int tamanhoLista(Lista *l);
 
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */
 
-/* função que verifica se um elemento já existe na lista (necessária para a próxima) */
+/* função que verifica se um elemento já existe na lista (necessária para a próxima):
+    retorna 0 - caso não exista lista ou nao consiga encontrar elemento
+    retorna 1 - caso encontre */
 int existeElemento(Lista *l, int dado);
 
 /* Função que insere um elemento na lista de forma ordenada:
-  caso não exista lista ou nao consiga criar elemento retorna 0
-  caso consiga retorna 1 */
+    retorna 0 - caso não exista lista ou nao consiga criar elemento
+    retorna 1 - caso consiga */
 int insereListaOrdenada(Lista *l, int dado);
 
 /* Função que insere um elemento na lista:
-  caso não exista lista ou nao consiga criar elemento retorna 0
-  caso consiga retorna 1 */
+    retorna 0 - caso não exista lista ou nao consiga criar elemento
+    retorna 1 - caso consiga */
 int insereLista(Lista *l, int dado);
 
-/* Função que remove um elemento da lista: */
+/* Função que remove um elemento da lista:
+    retorna 0 - caso não exista lista ou nao consiga remover elemento
+    retorna 1 - caso consiga */
 int removeLista(Lista *l, int dado);
 
 #endif //TAD_LISTA_DUPLAMENTE_VERIFICADA_DUPLAVER_H

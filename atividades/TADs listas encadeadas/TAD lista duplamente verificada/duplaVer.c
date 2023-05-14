@@ -99,27 +99,22 @@ int insereListaOrdenada(Lista *l, int dado) {
 
     if (l->inicio == NULL) { l->inicio = no;
     } else {
-        Elemento *anterior = NULL;
-        Elemento *atual = l->inicio;
+        Elemento *auxiliar = l->inicio;
 
-        while (atual != NULL && atual->dado < dado) {
-            anterior = atual;
-            atual = atual->prox;
-        }
+        while (auxiliar->prox != NULL && auxiliar->prox->dado < dado) { auxiliar = auxiliar->prox; }
 
-        if (anterior == NULL) { // insere no início
+        if (auxiliar == l->inicio && auxiliar->dado > dado) { // insere no início
             no->prox = l->inicio;
             l->inicio->ant = no;
             l->inicio = no;
-        } else if (atual == NULL) { // insere no fim
-            anterior->prox = no;
-            no->ant = anterior;
-            l->fim = no;
+        } else if (auxiliar->prox == NULL) { // insere no fim
+            auxiliar->prox = no;
+            no->ant = auxiliar;
         } else { // insere no meio
-            anterior->prox = no;
-            no->ant = anterior;
-            no->prox = atual;
-            atual->ant = no;
+            no->prox = auxiliar->prox;
+            no->ant = auxiliar;
+            auxiliar->prox->ant = no;
+            auxiliar->prox = no;
         }
     }
     return 1;
