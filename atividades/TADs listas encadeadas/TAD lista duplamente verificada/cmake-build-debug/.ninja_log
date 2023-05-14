@@ -1,0 +1,5 @@
+# ninja log v5
+23	1755	7057301620781634	build.ninja	c940d6c23a463494
+14	674	7057301632471486	CMakeFiles/TAD_lista_duplamente_verificada.dir/main.c.obj	3708e0c3ff9e1e0
+1	687	7057301632521487	CMakeFiles/TAD_lista_duplamente_verificada.dir/duplaVer.c.obj	8413c4dbed59f27c
+688	1275	7057301638741515	TAD_lista_duplamente_verificada.exe	a9d1017483b8c36c

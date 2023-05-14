@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "simplesVer.h"
+#include "duplaVer.h"
 
 int mostraMenu();
 

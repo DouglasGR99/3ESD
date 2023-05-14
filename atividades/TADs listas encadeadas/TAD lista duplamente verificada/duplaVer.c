@@ -1,4 +1,4 @@
-#include "simplesVer.h"
+#include "duplaVer.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,6 +14,7 @@ struct lista {
 struct elemento {
     int dado;
     struct elemento *prox;
+    struct elemento *ant;
 };
 
 /* vvv FUNÇÕES QUE MANIPULAM ESTRUTURA DA LISTA vvv */
@@ -43,6 +44,18 @@ int liberaLista(Lista *l) {
     return 1;
 }
 
+void imprimeLista(Lista *l) {
+    if (l == NULL) { return; }
+
+    Elemento *no = l->inicio;
+
+    while (no != NULL) {
+        printf("%d ", no->dado);
+        no = no->prox;
+    }
+    printf("\n");
+}
+
 int tamanhoLista(Lista *l) {
     if (l == NULL) { return 0; }
 
@@ -56,29 +69,17 @@ int tamanhoLista(Lista *l) {
     return tam;
 }
 
-void imprimeLista(Lista *l) {
-    if (l == NULL) { return; }
-
-    Elemento *no = l->inicio;
-
-    while (no != NULL) {
-        printf("%d ", no->dado);
-        no = no->prox;
-    }
-    printf("\n");
-}
-
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */
 
 /* função que verifica se um elemento já existe na lista (necessária para a próxima) */
-int existeElemento(Lista *l, int dado) { // tambem pode ser chamada de busca ou consulta
-    if (l == NULL || l->inicio == NULL) { return 0; }
+int existeElemento(Lista *l, int dado) {
+    if (l == NULL) { return 0; }
 
-    Elemento *atual = l->inicio;
+    Elemento *no = l->inicio;
 
-    while (atual != NULL && atual->dado != dado) { atual = atual->prox; }
+    while (no != NULL && no->dado != dado) { no = no->prox; }
 
-    if (atual == NULL) { return 0; }
+    if (no == NULL) { return 0; }
 
     return 1;
 }
@@ -94,6 +95,7 @@ int insereListaOrdenada(Lista *l, int dado) {
 
     no->dado = dado;
     no->prox = NULL;
+    no->ant = NULL;
 
     if (l->inicio == NULL) { l->inicio = no;
     } else {
@@ -107,13 +109,17 @@ int insereListaOrdenada(Lista *l, int dado) {
 
         if (anterior == NULL) { // insere no início
             no->prox = l->inicio;
+            l->inicio->ant = no;
             l->inicio = no;
         } else if (atual == NULL) { // insere no fim
-            l->fim->prox = no;
+            anterior->prox = no;
+            no->ant = anterior;
             l->fim = no;
         } else { // insere no meio
             anterior->prox = no;
+            no->ant = anterior;
             no->prox = atual;
+            atual->ant = no;
         }
     }
     return 1;
@@ -131,13 +137,17 @@ int insereLista(Lista *l, int dado) {
     // se a lista for ordenada, insere ordenado
     if (l->ordenada) {
         return insereListaOrdenada(l, dado);
-    } else {
+    } else { // senão insere no fim
         no->dado = dado;
         no->prox = NULL;
+        no->ant = NULL;
 
-        if (l->inicio == NULL) { l->inicio = no;
-        } else { l->fim->prox = no; }
-
+        if (l->inicio == NULL) {
+            l->inicio = no;
+        } else {
+            l->fim->prox = no;
+            no->ant = l->fim;
+        }
         l->fim = no;
         return 1;
     }
@@ -146,20 +156,24 @@ int insereLista(Lista *l, int dado) {
 int removeLista(Lista *l, int dado) {
     if (l == NULL) { return 0; }
 
-    Elemento *ant = NULL;
     Elemento *no = l->inicio;
 
     while (no != NULL && no->dado != dado) {
-        ant = no;
         no = no->prox;
     }
 
     if (no == NULL) { return 0; }
 
-    if (ant == NULL) { l->inicio = no->prox;
-    } else { ant->prox = no->prox; }
-
-    if (no->prox == NULL) { l->fim = ant; }
+    if (no->ant == NULL) { // remove do início
+        l->inicio = no->prox;
+        if (l->inicio != NULL) { l->inicio->ant = NULL; }
+    } else if (no->prox == NULL) { // remove do fim
+        l->fim = no->ant;
+        no->ant->prox = NULL;
+    } else { // remove do meio
+        no->ant->prox = no->prox;
+        no->prox->ant = no->ant;
+    }
 
     free(no);
     return 1;
