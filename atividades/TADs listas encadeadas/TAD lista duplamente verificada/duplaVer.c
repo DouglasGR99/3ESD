@@ -69,6 +69,8 @@ int tamanhoLista(Lista *l) {
     return tam;
 }
 
+/* ^^^ FUNÇÕES QUE MANIPULAM ESTRUTURA DA LISTA ^^^ */
+
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */
 
 /* função que verifica se um elemento já existe na lista (necessária para a próxima) */

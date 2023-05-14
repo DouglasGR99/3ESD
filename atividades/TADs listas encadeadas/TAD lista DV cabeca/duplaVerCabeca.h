@@ -1,5 +1,5 @@
-#ifndef TAD_LISTA_DUPLAMENTE_VERIFICADA_DUPLAVER_H
-#define TAD_LISTA_DUPLAMENTE_VERIFICADA_DUPLAVER_H
+#ifndef TAD_LISTA_DV_CABECA_DUPLAVERCABECA_H
+#define TAD_LISTA_DV_CABECA_DUPLAVERCABECA_H
 
 /* Estrutura da lista */
 typedef struct lista Lista;
@@ -30,11 +30,6 @@ int tamanhoLista(Lista *l);
     retorna 1 - caso encontre */
 int existeElemento(Lista *l, int dado);
 
-/* Função que insere um elemento na lista de forma ordenada:
-    retorna 0 - caso não exista lista ou nao consiga criar elemento
-    retorna 1 - caso consiga */
-int insereListaOrdenada(Lista *l, int dado);
-
 /* Função que insere um elemento na lista:
     retorna 0 - caso não exista lista ou nao consiga criar elemento
     retorna 1 - caso consiga */
@@ -45,4 +40,4 @@ int insereLista(Lista *l, int dado);
     retorna 1 - caso consiga */
 int removeLista(Lista *l, int dado);
 
-#endif //TAD_LISTA_DUPLAMENTE_VERIFICADA_DUPLAVER_H
+#endif //TAD_LISTA_DV_CABECA_DUPLAVERCABECA_H

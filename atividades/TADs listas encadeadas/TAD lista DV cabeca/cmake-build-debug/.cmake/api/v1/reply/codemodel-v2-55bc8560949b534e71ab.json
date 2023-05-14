@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TAD_lista_DV_cabeca",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TAD_lista_DV_cabeca::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TAD_lista_DV_cabeca-Debug-d5605dd8f47f86c687d3.json",
+					"name" : "TAD_lista_DV_cabeca",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista DV cabeca/cmake-build-debug",
+		"source" : "C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista DV cabeca"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

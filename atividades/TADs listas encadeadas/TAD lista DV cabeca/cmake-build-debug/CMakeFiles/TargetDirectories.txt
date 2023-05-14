@@ -1,0 +1,3 @@
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista DV cabeca/cmake-build-debug/CMakeFiles/TAD_lista_DV_cabeca.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista DV cabeca/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/alien/Documents/GitHub/3ESD/atividades/TADs listas encadeadas/TAD lista DV cabeca/cmake-build-debug/CMakeFiles/rebuild_cache.dir
