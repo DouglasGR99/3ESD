@@ -17,13 +17,13 @@ int main() {
             case 1:
                 printf("Digite o dado a ser inserido: ");
                 scanf("%d", &dado);
-                if (insereLista(l, dado)) { printf("Dado inserido com sucesso!\n");
+                if (insereElemento(l, dado)) { printf("Dado inserido com sucesso!\n");
                 } else { printf("Erro ao inserir dado!\n"); }
                 break;
             case 2:
                 printf("Digite o dado a ser removido: ");
                 scanf("%d", &dado);
-                if (removeLista(l, dado)) { printf("Dado removido com sucesso!\n");
+                if (removeElemento(l, dado)) { printf("Dado removido com sucesso!\n");
                 } else { printf("Erro ao remover dado!\n"); }
                 break;
             case 3:

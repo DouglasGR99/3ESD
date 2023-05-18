@@ -72,6 +72,66 @@ int tamanhoLista(Lista *l) {
     return cont;
 }
 
+int retiraSublista(Lista *l1, Lista *l2) {
+    if (l1 == NULL || l2 == NULL) { return 0; }
+
+    Elemento *no1 = l1->noCabeca->prox;
+    Elemento *no2 = l2->noCabeca->prox;
+
+    while (no1 != l1->noCabeca && no2 != l2->noCabeca) {
+        if (no1->dado == no2->dado) {
+            Elemento *aux = no1;
+            no1 = no1->prox;
+            aux->ant->prox = aux->prox;
+            aux->prox->ant = aux->ant;
+            free(aux);
+        } else if (no1->dado < no2->dado) { // se no1->dado > no2->dado, no2->dado não está em l1
+            no1 = no1->prox;
+        } else { // se no1->dado > no2->dado, no2->dado não está em l1
+            no2 = no2->prox;
+        }
+    }
+    return 1;
+}
+
+int concatenaListas(Lista *l1, Lista *l2) {
+    if (l1 == NULL || l2 == NULL) { return 0; }
+
+    Elemento *no = l2->noCabeca->prox;
+    while (no != l2->noCabeca) {
+        insereElemento(l1, no->dado);
+        no = no->prox;
+    }
+    return 1;
+}
+
+int copiaLista(Lista *l1, Lista *l2) {
+    if (l1 == NULL || l2 == NULL) { return 0; }
+
+    Elemento *no = l1->noCabeca->prox;
+    while (no != l1->noCabeca) {
+        insereElemento(l2, no->dado);
+        no = no->prox;
+    }
+    return 1;
+}
+
+int inverteLista(Lista *l) {
+    if (l == NULL) { return 0; }
+
+    Elemento *no = l->noCabeca->prox;
+    while (no != l->noCabeca) {
+        Elemento *aux = no->prox;
+        no->prox = no->ant;
+        no->ant = aux;
+        no = aux;
+    }
+    Elemento *aux = l->noCabeca->prox;
+    l->noCabeca->prox = l->noCabeca->ant;
+    l->noCabeca->ant = aux;
+    return 1;
+}
+
 /* ^^^ FUNÇÕES QUE MANIPULAM ESTRUTURA DA LISTA ^^^ */
 
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */
@@ -85,7 +145,7 @@ int existeElemento(Lista *l, int dado) {
     return 1;
 }
 
-int insereLista(Lista *l, int dado) {
+int insereElemento(Lista *l, int dado) {
     if (l == NULL) { return 0; }
 
     // se proibe repetição, não insere caso elemento já exista
@@ -112,7 +172,7 @@ int insereLista(Lista *l, int dado) {
     return 1;
 }
 
-int removeLista(Lista *l, int dado) {
+int removeElemento(Lista *l, int dado) {
     if (l == NULL) { return 0; }
 
     Elemento *no = l->noCabeca->prox;

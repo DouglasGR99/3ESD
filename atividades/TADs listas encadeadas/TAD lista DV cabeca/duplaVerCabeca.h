@@ -21,6 +21,21 @@ void imprimeLista(Lista *l);
 /* Função que retorna o tamanho da lista */
 int tamanhoLista(Lista *l);
 
+/* Função que remove elementos da lista 2 que estão na lista 1
+    retorna 0 - caso não consiga
+    retorna 1 - caso consiga */
+int retiraSublista(Lista *l1, Lista *l2);
+
+/* Função que concatena duas listas
+    retorna 0 - caso não consiga
+    retorna 1 - caso consiga */
+int concatenaListas(Lista *l1, Lista *l2);
+
+/* Função que copia uma lista para outra
+    retorna 0 - caso não consiga
+    retorna 1 - caso consiga */
+int copiaLista(Lista *l1, Lista *l2);
+
 /* ^^^ FUNÇÕES QUE MANIPULAM ESTRUTURA DA LISTA ^^^ */
 
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */
@@ -33,11 +48,11 @@ int existeElemento(Lista *l, int dado);
 /* Função que insere um elemento na lista:
     retorna 0 - caso não exista lista ou nao consiga criar elemento
     retorna 1 - caso consiga */
-int insereLista(Lista *l, int dado);
+int insereElemento(Lista *l, int dado);
 
 /* Função que remove um elemento da lista:
     retorna 0 - caso não exista lista ou nao consiga remover elemento
     retorna 1 - caso consiga */
-int removeLista(Lista *l, int dado);
+int removeElemento(Lista *l, int dado);
 
 #endif //TAD_LISTA_DV_CABECA_DUPLAVERCABECA_H
