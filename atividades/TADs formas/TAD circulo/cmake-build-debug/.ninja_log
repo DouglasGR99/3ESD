@@ -1,0 +1,11 @@
+# ninja log v5
+2	546	7062055373963230	CMakeFiles/TAD_circulo.dir/circulo.c.obj	36b89abbae2c8fcc
+30	560	7062055373993256	CMakeFiles/TAD_circulo.dir/ponto.c.obj	47292d4d30fcb823
+47	574	7062055374573521	CMakeFiles/TAD_circulo.dir/main.c.obj	cbf4ab8fc490c5a
+575	1253	7062055381303287	TAD_circulo.exe	85c3df48bd2b957d
+7	321	7062056548400517	CMakeFiles/TAD_circulo.dir/main.c.obj	cbf4ab8fc490c5a
+322	990	7062056554620578	TAD_circulo.exe	85c3df48bd2b957d
+7	462	7062057385215290	CMakeFiles/TAD_circulo.dir/main.c.obj	cbf4ab8fc490c5a
+464	872	7062057389575196	TAD_circulo.exe	85c3df48bd2b957d
+7	291	7062057971855256	CMakeFiles/TAD_circulo.dir/main.c.obj	cbf4ab8fc490c5a
+292	779	7062057976605262	TAD_circulo.exe	85c3df48bd2b957d

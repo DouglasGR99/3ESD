@@ -1,54 +1,83 @@
-#include "circulo.h"
-#include "ponto.h"
+#include "CIRCULO.h"
+#include "PONTO.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#define PI 3.14159
 
- struct circ {
-    Ponto *O,*A;
-  };
+struct circulo {
+    Ponto*p;
+    float r;
+};
 
-Circulo* circ_cria (float x1, float y1,float x2, float y2){
-  Circulo *c=(Circulo*)malloc(sizeof(Circulo));
-  //considerando sempres que os ptos são não colineraes
-  c->O=pto_cria(x1,y1);
-  c->A=pto_cria(x2,y2);
-    return c;
+/* Funções exportadas */
+/* Função cria - Aloca e retorna um círculo com centro (x,y) e raio r */
+Circulo* circ_cria(float x, float y, float r){
+    Circulo * c= (Circulo*) malloc(sizeof(Circulo));
+    if (c){
+        c->p= pto_cria(x,y);
+        if (c->p){
+            c->r=r;
+            return c;
+        }
+    }
+    circ_libera(c);
+    return NULL;
 }
 
+/* Função libera - Libera a memória de um círculo previamente criado */
 void circ_libera(Circulo* c){
-  pto_libera(c->A);
-  pto_libera(c->O);
-  free(c);
+    pto_libera(c->p);
+    free(c);
+}
+int circ_compara(Circulo* c1, Circulo* c2){
+    float a1=circ_area(c1);
+    float a2=circ_area(c2);
+    return a1-a2;
+}
+/* Função area - Retorna o valor da área do círculo */
+float circ_area(Circulo* c){
+    return PI * c->r * c->r;
+
 }
 
-void circ_acessa(Circulo* c, float* x1, float* y1,float* x2, float* y2){
-  pto_acessa(c->O,x1,y1);
-  pto_acessa(c->A,x2,y2);
+/* Função interior - Verifica se um dado ponto p está dentro do círculo */
+int circ_interior(Circulo* c, Ponto* p){
+    float dist= pto_distancia(p,c->p);
+    return (dist<=c->r);
 }
 
-void circ_atribui(Circulo* c, float x1, float y1,float x2, float y2){
-  pto_atribui(c->O,x1,y1);
-  pto_atribui(c->A,x2,y2);
-}
-
+/* Função getCirculo - Retorna uma string lo no formato (c:centro,r:raio)*/
 char* circ_getCirculo(Circulo* c){
-     char* pt;
-    int tam = sizeof(*c)+ 30;
-    pt = (char*)malloc(tam);
-    sprintf(pt,"O: %s  A: %s", pto_getPonto(c->O),pto_getPonto(c->A));
+    int qt=sizeof(c->p);
+    char* pt= (char*)malloc(sizeof(*c) +qt+17);
+    sprintf(pt,"(centro:%s,raio:%.2f)",pto_getPonto(c->p),c->r);
     return pt;
 }
 
+/* Função exibe -Escreve na tela o círculo no formato  (c:centro,r:raio)*/
 void circ_exibe(Circulo* c){
-  printf("\nO: %s",pto_getPonto(c->O));
-  printf("\nA: %s",pto_getPonto(c->A));
+    printf("(centro:%s,raio:%.1f)",pto_getPonto(c->p),c->r);
 }
 
-float circ_perimetro(Circulo* c){
-  return 2 * pto_distancia(c->O,c->A) * 3.14;
+/* Função compara - Retorna 1 se o 1º círculo é == ao 2º*/
+//int circ_compara(Circulo* c1, Circulo* c2);
+
+/* Função clona – cria um novo cículo igual ao recebido*/
+Circulo* circ_clona(Circulo* cOrigem){
+    float x,y;
+    pto_acessa(cOrigem-> p, &x, &y);
+    return circ_cria(x,y,cOrigem->r);
 }
 
-float circ_area(Circulo* c){
-  return 3.14*(pow(pto_distancia(c->O,c->A), 2));
+float circ_getRaio(Circulo* c){
+    return c->r;
+}
+Ponto* circ_getCentro(Circulo* c){
+    return c->p;
+}
+void circ_setRaio(Circulo* c,float r){
+    c->r=r;
+}
+void circ_setCentro(Circulo* c,Ponto *p){
+    c->p=p;
 }

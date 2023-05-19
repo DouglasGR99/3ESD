@@ -36,6 +36,11 @@ int concatenaListas(Lista *l1, Lista *l2);
     retorna 1 - caso consiga */
 int copiaLista(Lista *l1, Lista *l2);
 
+/* Função que verifica se uma lista é sublista de outra
+    retorna 0 - caso não seja
+    retorna 1 - caso seja */
+int verificaSublista(Lista *l1, Lista *l2);
+
 /* ^^^ FUNÇÕES QUE MANIPULAM ESTRUTURA DA LISTA ^^^ */
 
 /* vvv FUNÇÕES QUE MANIPULAM ELEMENTOS DA LISTA vvv */

@@ -74,7 +74,7 @@ int tamanhoLista(Lista *l) {
 
 int retiraSublista(Lista *l1, Lista *l2) {
     if (l1 == NULL || l2 == NULL) { return 0; }
-
+    if (verificaSublista(l1, l2) == 0) { return 0; }
     Elemento *no1 = l1->noCabeca->prox;
     Elemento *no2 = l2->noCabeca->prox;
 
@@ -92,6 +92,24 @@ int retiraSublista(Lista *l1, Lista *l2) {
         }
     }
     return 1;
+}
+
+int verificaSublista(Lista *l1, Lista *l2) {
+    if (l1 == NULL || l2 == NULL) { return 0; }
+
+    Elemento *no1 = l1->noCabeca->prox;
+    Elemento *no2 = l2->noCabeca->prox;
+
+    while (no1 != l1->noCabeca) {
+        if (no1->dado != no2->dado) { //enquanto forem diferentes, procura o começo de uma possível sublista
+            no1 = no1->prox;
+        } else { //quando a sublista começa, compara os elementos
+            no1 = no1->prox;
+            no2 = no2->prox;
+            if (no2 == l2->noCabeca) { return 1; } //se chegou no fim da lista 2, é sublista
+        }
+    }
+    return 0; //se chegou no fim da lista 1, não é sublista
 }
 
 int concatenaListas(Lista *l1, Lista *l2) {
@@ -184,3 +202,4 @@ int removeElemento(Lista *l, int dado) {
     free(no);
     return 1;
 }
+
