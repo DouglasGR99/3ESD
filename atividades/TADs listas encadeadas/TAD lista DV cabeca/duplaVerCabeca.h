@@ -12,6 +12,9 @@ typedef struct elemento Elemento;
 /* Função que cria uma lista vazia */
 Lista *criaLista(int ordenada, int semRepeticao);
 
+/* Função que cria uma sublista */
+Lista *criaSublista(Lista *l, int inicio, int fim);
+
 /* Função que libera a memória da lista */
 int liberaLista(Lista *l);
 

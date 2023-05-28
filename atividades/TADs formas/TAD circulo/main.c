@@ -5,8 +5,8 @@
 void bubbleOrdenaArea(Circulo* circulos[], int n) {
     int i, j;
     Circulo* aux;
-    for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n - (i + 1); j++) {
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n - 1; j++) {
             if (circ_compara(circulos[j], circulos[j + 1]) > 0) {
                 aux = circulos[j];
                 circulos[j] = circulos[j + 1];
@@ -15,6 +15,29 @@ void bubbleOrdenaArea(Circulo* circulos[], int n) {
         }
     }
 }
+
+typedef struct item Item;
+struct item {
+    int codigoMaterial;
+    int quantidade;
+    Item* maiorPrioridade;
+    Item* menorPrioridade;
+};
+
+typedef struct filial Filial;
+struct filial {
+    Item* itemCabeca;
+    int quantidadeItens;
+};
+
+typedef struct setor Setor;
+struct setor {
+    Item* listaItens[filial1->quantidadeItens + filial2->quantidadeItens];
+};
+
+
+
+
 
 int main(void) {
     //vetor de circulos
@@ -30,27 +53,35 @@ int main(void) {
 
 
     //exibindo os circulos
-    i=0;
     printf("Circulos:\n");
-    while (i<6){
-        circ_exibe(circulos[i]); //(c)
-        printf(" area: %.2f",circ_area(circulos[i]));
-        printf("\n");
-        i++;
-    }
+    circ_exibeVetor(circulos,6); //(c)
 
 
     //ordenando os circulos
-    bubbleOrdenaArea(circulos,5); //(d)
+    //bubbleOrdenaArea(circulos,6); //(d antiga)
 
-
-    //exibindo os circulos ordenados
-    i=0;
-    printf("\n\nOrdenados:\n");
-    while (i<6){
-        circ_exibe(circulos[i]); //(e)
-        printf(" area: %.2f",circ_area(circulos[i]));
-        printf("\n");
+    //questao 2 extra
+    Circulo* cFora; //(d)
+    cFora=circ_cria(rand()%10,rand()%10,rand()%10);
+    printf("\n\nCirculo fora: ");
+    circ_exibe(cFora);
+    i = 0;
+    while (i<6) {
+        if (circ_comparaPosicao(cFora,circulos[i])==1){
+            printf("\nO circulo %d eh tangente ao circulo fora",i+1);
+        }
+        else if (circ_comparaPosicao(cFora,circulos[i])==2){
+            printf("\nO circulo %d eh secante ao circulo fora",i+1);
+        }
+        else{
+            printf("\nO circulo %d nao se toca ao circulo fora",i+1);
+        }
         i++;
-    }
+    } //(e)
+
+
+    /*//exibindo os circulos ordenados
+    printf("\n\nOrdenados:\n");
+    circ_exibeVetor(circulos,6);*/
+    return 0;
 }

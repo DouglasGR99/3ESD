@@ -35,6 +35,30 @@ Lista *criaLista(int ordenada, int semRepeticao) {
     return l;
 }
 
+Lista *criaSublista(Lista *l, int inicio, int fim) {
+    if (l == NULL) { return NULL; }
+    if (inicio < 0 || fim < 0) { return NULL; }
+    if (inicio > fim) { return NULL; }
+    if (inicio > tamanhoLista(l)) { return NULL; }
+    if (fim > tamanhoLista(l)) { return NULL; }
+
+    Lista *sublista = criaLista(l->ordenada, l->semRepeticao);
+    if (sublista == NULL) { return NULL; }
+
+    Elemento *no = l->noCabeca->prox;
+    int cont = 0;
+    while (cont < inicio) {
+        no = no->prox;
+        cont++;
+    }
+    while (cont <= fim) {
+        insereElemento(sublista, no->dado);
+        no = no->prox;
+        cont++;
+    }
+    return sublista;
+}
+
 int liberaLista(Lista *l) {
     if (l == NULL) { return 0; }
 

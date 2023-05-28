@@ -59,8 +59,35 @@ void circ_exibe(Circulo* c){
     printf("(centro:%s,raio:%.1f)",pto_getPonto(c->p),c->r);
 }
 
+void circ_exibeVetor(Circulo** c,int n){
+    int i;
+    for (i=0;i<n;i++){
+        circ_exibe(c[i]);
+        printf(" area: %.2f",circ_area(c[i]));
+        printf("\n");
+    }
+}
+
 /* Função compara - Retorna 1 se o 1º círculo é == ao 2º*/
-//int circ_compara(Circulo* c1, Circulo* c2);
+int circ_compara(Circulo* c1, Circulo* c2);
+
+/* Função compara posições: Compara se dois circulos sao tangentes, secantes ou não se tocam
+    retorna:
+    1 se são tangentes
+    2 se são secantes
+    3 se não se tocam*/
+int circ_comparaPosicao(Circulo* c1, Circulo* c2) {
+    float dist= pto_distancia(c1->p,c2->p); //distancia entre os centros
+    if (dist == (c1->r+c2->r)){ //tangentes (caso a distancia entre os centros seja igual a soma dos raios)
+        return 1;
+    }
+    else if (dist < (c1->r+c2->r)){ //secantes (caso a distancia entre os centros seja menor que a soma dos raios)
+        return 2;
+    }
+    else{ //não se tocam
+        return 3;
+    }
+}
 
 /* Função clona – cria um novo cículo igual ao recebido*/
 Circulo* circ_clona(Circulo* cOrigem){

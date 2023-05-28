@@ -22,12 +22,22 @@ char* circ_getCirculo(Circulo* p);
 /* Função exibe -Escreve na tela o círculo no formato  (c:centro,r:raio)*/
 void circ_exibe(Circulo* p);
 
+/* Função exibe vetor de círculos -Escreve na tela o vetor de círculos no formato  (c:centro,r:raio)*/
+void circ_exibeVetor(Circulo** v, int n);
+
 /* Função compara - Retorna:
   valor<0 (negativo) se o 1º círculo é menor que o 2º,
   valor == 0, se são iguais
   valor>0 se o 1º círculo é maiorr que o 2º
   Um cículo é menor que outro se sua área for menor  que a do outro*/
 int circ_compara(Circulo* c1, Circulo* c2);
+
+/* Função compara posições: Compara se dois circulos sao tangentes, secantes ou não se tocam
+    retorna:
+    1 se são tangentes
+    2 se são secantes
+    3 se não se tocam*/
+int circ_comparaPosicao(Circulo* c1, Circulo* c2);
 
 /* Função clona – cria um novo cículo igual ao recebido*/
 Circulo* circ_clona(Circulo* c1);
