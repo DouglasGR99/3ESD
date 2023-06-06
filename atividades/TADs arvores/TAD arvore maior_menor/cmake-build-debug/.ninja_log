@@ -1,0 +1,9 @@
+# ninja log v5
+2	623	7077925641445749	CMakeFiles/TAD_arvore_maior_menor.dir/main.c.obj	2354739f679b6300
+21	659	7077925641795785	CMakeFiles/TAD_arvore_maior_menor.dir/arvoreBinaria.c.obj	23979bb762083a51
+660	1273	7077925648365716	TAD_arvore_maior_menor.exe	cd37a2d22fcf09d5
+6	638	7077935204656900	CMakeFiles/TAD_arvore_maior_menor.dir/arvoreBinaria.c.obj	23979bb762083a51
+20	668	7077935204756926	CMakeFiles/TAD_arvore_maior_menor.dir/main.c.obj	2354739f679b6300
+668	1075	7077935209116865	TAD_arvore_maior_menor.exe	cd37a2d22fcf09d5
+7	388	7077935565739681	CMakeFiles/TAD_arvore_maior_menor.dir/main.c.obj	2354739f679b6300
+391	835	7077935570399617	TAD_arvore_maior_menor.exe	cd37a2d22fcf09d5
